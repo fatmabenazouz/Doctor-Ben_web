@@ -5,6 +5,7 @@
     margin: 0 auto;
     overflow: auto;
     padding: 0 40px;
+    
 }
 
 .card {
@@ -14,6 +15,7 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin: 10px;
+    animation: transitionIn 0.75s;
 }
 
 .btn {
@@ -70,6 +72,84 @@
    color: #fff;
 }
 
+/* hamburger bar */
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    margin-right: 20px;
+}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+/* Media query to display hamburger icon only on small screens */
+@media(max-width: 768px) {
+    #navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color); /* Change the background color as per your design */
+        position: absolute;
+        top: 70px; /* Adjust as per your design */
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #navbar ul.show {
+        display: flex;
+    }
+
+    #navbar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Adjust hamburger icon styles */
+    .hamburger .bar {
+        background-color: #fff;
+    }
+
+    .hamburger .bar:nth-child(2) {
+        margin: 4px 0;
+    }
+}
+
 /* text colours */
 
 .text-primary {
@@ -86,6 +166,10 @@
 
 .text-light {
     color: var(--light-color);
+}
+
+.bolder {
+    font-weight: bolder;
 }
 
 /* text sizes */
