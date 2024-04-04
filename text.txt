@@ -364,3 +364,10 @@ document.addEventListener('DOMContentLoaded', function() {
         margin: 4px 0;
     }
 }
+
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    width: 70px;
+    transition: transform 0.2s ease-in;
+}
